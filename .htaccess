@@ -1,0 +1,15 @@
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# RewriteRule ^(.+)$ index.php/$1 [L]
+
+
+# RewriteBase /
+
+# RewriteCond $1 !^(index\.php|robots\.txt)
+
+RewriteRule ^(.*)$ index.php?/$1 [L]
